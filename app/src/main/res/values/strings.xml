@@ -1,0 +1,76 @@
+<resources>
+
+    <!-- Titles -->
+    <string name="app_name">Weight Control</string>
+    <string name="title_activity_main">کنترل وزن</string>
+    <string name="title_activity_add_status">ذخیره وضعیت بدن</string>
+    <string name="title_activity_database_management">مدیریت داده ها</string>
+    <string name="title_activity_status_manage">مدیریت وضعیت ها</string>
+    <string name="title_activity_status">مشاهده وضعیت</string>
+
+    <!-- Global strings -->
+    <string name="action_settings">گزینه ها</string>
+    <string name="action_new">جدید</string>
+    <string name="action_save">ذخیره</string>
+    <string name="action_edit">ویرایش</string>
+    <string name="action_cancel">لغو</string>
+    <string name="action_delete">حذف</string>
+    <string name="yes">بله</string>
+    <string name="no">نه</string>
+    <string name="delete_warning">آیا از پاک کردن این رکورد اطمینان دارید؟</string>
+    <string name="delete_confirmed">رکورد پاک شد!</string>
+    <string name="delete_failed">خطایی رخ داده! رکورد پاک نشد!</string>
+
+    <!-- Special characters -->
+    <string name="special_character_up">↑</string>
+    <string name="special_character_down">↓</string>
+    <string name="special_character_ok">√</string>
+
+    <!-- -->
+    <string name="action_manage_data">مدیریت داده ها</string>
+
+    <!-- -->
+    <string name="main_form_height">قد</string>
+    <string name="main_form_height_hint">سانتیمتر</string>
+    <string name="main_form_weight">وزن</string>
+    <string name="main_form_weight_hint">کیلوگرم</string>
+    <string name="main_form_calculate">محاسبه</string>
+    <string name="main_analyze_status_caption">وضعیت:</string>
+    <string name="main_analyze_bmi_caption">شاخص:</string>
+    <string name="main_analyze_ideal_weight_caption">وزن ایده آل:</string>
+    <string name="main_analyze_to_ideal_weight_caption">تا وزن ایده آل:</string>
+    <string name="main_analyze_normal_range_caption">بازه نرمال وزنی:</string>
+    <string name="main_analyze_weight_caption">وزن:</string>
+    <string name="main_analyze_height_caption">قد:</string>
+    <string name="main_form_null_height">اندازه قد وارد نشده است\!</string>
+    <string name="main_form_null_weight">میزان وزن وارد نشده است\!</string>
+    <string name="main_analyze_difference_caption">تغییر وزن:</string>
+    <string name="main_chart_title">نمودار تغییر وزن</string>
+
+    <!-- -->
+    <string name="weight_status_underweight">کمبود وزن</string>
+    <string name="weight_status_normal">نرمال</string>
+    <string name="weight_status_standard">استاندارد</string>
+    <string name="weight_status_overweight">اضافه وزن</string>
+    <string name="weight_status_obesity1">چاقی مرحله 1</string>
+    <string name="weight_status_obesity2">چاقی مرحله 2</string>
+    <string name="weight_status_obesity3">چاقی مرحله 3</string>
+
+    <!-- -->
+    <string name="save_difference_caption">اختلاف نسبت به گذشته:</string>
+    <string name="save_activity_caption">فعالیت های انجام شده:</string>
+    <string name="save_face_caption">میزان رضایت از نتیجه:</string>
+    <string name="save_check_date_caption">تاریخ بررسی:</string>
+
+    <!-- -->
+    <string name="dbm_status">وضعیت ها</string>
+    <string name="dbm_diet">رژیم ها</string>
+    <string name="dbm_program">برنامه ها</string>
+    <string name="dbm_remind">یادآور ها</string>
+
+    <!-- -->
+
+    <!--
+    <string name="main_analyze_"></string>
+    -->
+</resources>

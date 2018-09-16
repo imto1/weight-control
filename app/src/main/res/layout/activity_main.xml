@@ -1,0 +1,305 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="ir.behmerd.weightcontrol.MainActivity"
+    android:background="@drawable/main_background"
+    android:id="@+id/main_master"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/main_chart_area">
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/main_form_area"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/main_form_fields"
+            android:background="@drawable/main_form_rounded">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:id="@+id/et_main_height"
+                android:background="@color/white"
+                android:hint="@string/main_form_height"
+                android:textColor="@color/black"
+                android:singleLine="true" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:id="@+id/et_main_weight"
+                android:background="@color/white"
+                android:layout_marginTop="15dp"
+                android:hint="@string/main_form_weight"
+                android:textColor="@color/black"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="@string/special_character_ok"
+            android:id="@+id/btn_main_calculate"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/main_button_rounded"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:id="@+id/main_analyze_scroll"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/main_analyze_area" >
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/iv_main_analyze"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/underweight"
+                android:background="@drawable/main_analyze_image_underweight"
+                android:padding="5dp" />
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/main_analyze_result_area"
+                    android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/main_analyze_height_caption"
+                    android:id="@+id/tv_main_height_caption"
+                    android:layout_alignParentTop="true"
+                    android:gravity="right"
+                    android:textSize="15sp"
+                    android:layout_alignParentRight="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:id="@+id/tv_main_height"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_toLeftOf="@+id/tv_main_height_caption"
+                    android:layout_toStartOf="@+id/tv_main_body_status_caption"
+                    android:layout_marginRight="5dp"
+                    android:textSize="15sp"
+                    android:layout_alignTop="@+id/tv_main_height_caption" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:id="@+id/tv_main_weight"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_toLeftOf="@+id/tv_main_weight_caption"
+                    android:layout_toStartOf="@+id/tv_main_body_status_caption"
+                    android:layout_marginRight="5dp"
+                    android:textSize="15sp"
+                    android:layout_alignTop="@+id/tv_main_weight_caption" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/main_analyze_weight_caption"
+                    android:id="@+id/tv_main_weight_caption"
+                    android:layout_alignParentTop="false"
+                    android:gravity="right"
+                    android:textSize="15sp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tv_main_height_caption"
+                    android:layout_marginTop="15dp" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:id="@+id/tv_main_body_status"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_alignTop="@+id/tv_main_body_status_caption"
+                        android:layout_toLeftOf="@+id/tv_main_body_status_caption"
+                        android:layout_toStartOf="@+id/tv_main_body_status_caption"
+                        android:layout_marginRight="5dp"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:id="@+id/tv_main_bmi"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_alignTop="@+id/tv_main_bmi_caption"
+                        android:layout_toLeftOf="@+id/tv_main_bmi_caption"
+                        android:layout_toStartOf="@+id/tv_main_bmi_caption"
+                        android:layout_marginRight="5dp"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:id="@+id/tv_main_ideal_weight"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_alignTop="@+id/tv_main_ideal_weight_caption"
+                        android:layout_toLeftOf="@+id/tv_main_ideal_weight_caption"
+                        android:layout_toStartOf="@+id/tv_main_ideal_weight_caption"
+                        android:layout_marginRight="5dp"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:id="@+id/tv_main_to_ideal_weight"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_alignTop="@+id/tv_main_to_ideal_weight_caption"
+                        android:layout_toLeftOf="@+id/tv_main_to_ideal_weight_caption"
+                        android:layout_toStartOf="@+id/tv_main_to_ideal_weight_caption"
+                        android:layout_marginRight="5dp"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:id="@+id/tv_main_normal_range"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_alignTop="@+id/tv_main_normal_range_caption"
+                        android:layout_toLeftOf="@+id/tv_main_normal_range_caption"
+                        android:layout_toStartOf="@+id/tv_main_normal_range_caption"
+                        android:layout_marginRight="5dp"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="@string/main_analyze_status_caption"
+                        android:id="@+id/tv_main_body_status_caption"
+                        android:layout_alignParentTop="false"
+                        android:gravity="right"
+                        android:textSize="15sp"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/tv_main_weight_caption"
+                        android:layout_marginTop="15dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="@string/main_analyze_bmi_caption"
+                        android:id="@+id/tv_main_bmi_caption"
+                        android:layout_below="@+id/tv_main_body_status"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="15dp"
+                        android:gravity="right"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="@string/main_analyze_ideal_weight_caption"
+                        android:id="@+id/tv_main_ideal_weight_caption"
+                        android:layout_below="@+id/tv_main_bmi"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="15dp"
+                        android:gravity="right"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="@string/main_analyze_to_ideal_weight_caption"
+                        android:id="@+id/tv_main_to_ideal_weight_caption"
+                        android:layout_below="@+id/tv_main_ideal_weight"
+                        android:layout_marginTop="15dp"
+                        android:gravity="right"
+                        android:textSize="15sp"
+                        android:layout_alignParentRight="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="@string/main_analyze_normal_range_caption"
+                        android:id="@+id/tv_main_normal_range_caption"
+                        android:layout_marginTop="15dp"
+                        android:gravity="right"
+                        android:textSize="15sp"
+                        android:layout_below="@+id/tv_main_to_ideal_weight_caption"
+                        android:layout_alignParentRight="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/main_analyze_difference_caption"
+                    android:id="@+id/main_difference_caption"
+                    android:textSize="15sp"
+                    android:layout_below="@+id/tv_main_normal_range_caption"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:id="@+id/main_difference"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_alignTop="@+id/main_difference_caption"
+                    android:layout_toLeftOf="@+id/main_difference_caption"
+                    android:layout_toStartOf="@+id/main_difference_caption"
+                    android:layout_marginRight="5dp"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/main_face_icon"
+                    android:src="@drawable/nochange"
+                    android:layout_marginTop="15dp"
+                    android:layout_below="@+id/main_difference_caption"
+                    android:layout_centerHorizontal="true" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

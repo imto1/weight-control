@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <!-- -->
+    <color name="underweight_image">#fffdfdfe</color>
+    <color name="normal_image">#ffd8fdd8</color>
+    <color name="overweight_image">#fffdfdd9</color>
+    <color name="obesity_image">#fffdc0c0</color>
+    <!-- -->
+    <color name="underweight">#0077ff</color>
+    <color name="normal">#00aa00</color>
+    <color name="overweight">#ff7777</color>
+    <color name="obesity">#ff0000</color>a
+    <!-- -->
+    <color name="bg_gradient_start">#0099dd</color>
+    <color name="bg_gradient_end">#820d2a</color>
+    <color name="bg_button_login">#336167</color>
+</resources>
